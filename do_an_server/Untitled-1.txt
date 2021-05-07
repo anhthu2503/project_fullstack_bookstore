@@ -1,0 +1,91 @@
+﻿request client len server gom url, body, params, header
+
+mạng máy tính gồm :
+    TCP/IP: bắt tay 3 bước
+    UDP: đẩy liên tục
+
+token:
+ dang nhap
+ reset password
+ dang nhap 2 buoc
+
+
+npm install concurrently --save
+cho hai con server thong voi nhau
+
+PROJECT
+------------------------------------
+sửa db để export lên
+kiếm frontend
+chia theo bố cục code viết theo react
+thử test db api
+
+**********
+Tổ chức bố cục trang web để dễ tìm kiếm và sửa
+widgets trang nào cx gắn vào
+ -header
+ -slider
+ -content
+ => page
+
+ từng phần nhỏ của các phần trong trang là moduler
+
+**********
+-trong phần server update api phải có quyền admin
+-api update cho frontend
+
+**********
+chứng thực và xác thực khác nhau
+-khi login là xác thực, gửi username và password
+-khi chứng thực gửi token lên để kiểm tra
+**********
+-login ko cần check
+
+++++++++++++++
+tao file img va luu hinh cua sach vao do
+
+type : 0: sach
+ ngay dang, ngay update, ban quyen, luot xem : sach ko can
+
+alias cua table sach_truyen đe lai
+table slider_baner
+phan loai, id_loai_cha, sap xep cua table the_loai/
+table loai_nguoi_dung/
+
+
+the loai nau an gop chung lam dep =>   id 31
+
+phan loai
+1: sach
+2: truyen
+0: ca hai
+
+tinh trang sach_truyen
+-sach
+0: con hang
+1: het hang
+3: khuyen mai
+-truyen
+4:unfull
+5:full
+
+lam table tin tuc
+=========================
+
+lam page mua ban sach truyen(trang đang bai-trang cong dong)
+-anh
+-thông tin sach
+-chat
+-giao dich truc tiep
+-co thanh menu:
++ gioi thieu
++su kien
++FAQS : them page chi content thay đoi
+
+//blog template reactjs
+
+  // "scripts": {
+  //   "start": "node ./bin/www",
+  //   "client": "npm start --prefix ../do_an_react",
+  //   "dev": "concurrently \"npm run server\" \"npm run client\""
+  // },
