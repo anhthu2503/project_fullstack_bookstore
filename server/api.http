@@ -1,0 +1,211 @@
+###
+GET http://localhost:4000/users
+
+###
+POST http://localhost:4000/users
+
+###
+PUT http://localhost:4000/users
+
+###
+DELETE http://localhost:4000/users
+Content-Type: application/json
+Authorization: Basic aHVuZ25ndXllbjoxMjM0NTY=
+
+["asdasd","bbbb","ccc"]
+
+
+###
+GET http://localhost:4000/user/
+
+###
+POST http://localhost:4000/users
+Content-Type: application/json
+Authorization: Basic aHV5bmh0aHU6MTIzNDU2
+
+[
+    {
+        "name": "Huynh Thu",
+        "tai_khoan": "huynhthu",
+        "mat_khau": "123456789",
+        "email": "huynh1@gmail.com"
+    },
+    {
+        "name": "Huynh Thu 1",
+        "tai_khoan": "huynhthu",
+        "mat_khau": "123456789",
+        "email": "huynh2@gmail.com"
+    },
+    {
+        "name": "Huynh Thu 2",
+        "tai_khoan": "huynhthu",
+        "mat_khau": "123456789",
+        "email": "huynh3@gmail.com"
+    }
+]
+
+###
+PUT http://localhost:4000/user/5fe9de6bc0e347252caae813
+Content-Type: application/json
+
+{
+    "name": "Huỳnh Thư",
+    "tai_khoan": "huynhthu",
+    "mat_khau": "123456789",
+    "email": "anhthu25032001@gmail.com"
+}
+
+###
+DELETE http://localhost:4000/user/60963324427ce92a0085651e
+Content-Type: application/json
+Authorization: Basic aHV5bmh0aHU6MTIzNDU2
+
+###
+POST http://localhost:4000/user
+Content-Type: application/json
+Authorization: Basic aHV5bmh0aHU6MTIzNDU2
+
+{
+    "name": "Huỳnh Thư",
+    "tai_khoan": "huynhthu",
+    "mat_khau": "123456789",
+    "email": "anhthu25032001@gmail.com"
+}
+
+
+###
+POST http://localhost:4000/user/logn-in
+Content-Type: application/json
+
+{
+    "tai_khoan": "huynhthu",
+    "mat_khau": "123456789"
+}
+
+###
+POST http://localhost:4000/user/sign-up
+Content-Type: application/json
+
+
+{
+    "name": "Huỳnh Thư",
+    "tai_khoan": "huynhthu",
+    "mat_khau": "123456789",
+    "email": "anhthu25032001@gmail.com"
+}
+
+
+
+###
+POST http://localhost:4000/user/admin-log-in
+Content-Type: application/json
+
+{
+    "ten_dang_nhap": "huynhthu",
+    "mat_khau": "123456"
+}
+
+# ###
+# POST http://localhost:4000/user/admin-authorized
+# Content-Type: application/json
+# Authorization: Basic dHVhbkB5YWhvby5jb210dWFuYTBhODA2YTgtZWU4NC00N2RkLTgyOTItYWY3NzE5ZDUwYmNm
+
+# {}
+
+###
+GET http://localhost:4000/phan-quyen
+
+###
+GET http://localhost:4000/phan-quyen/2
+
+###
+GET http://localhost:4000/menu-quan-tri
+
+
+###
+PUT http://localhost:4000/phan-quyen/3
+Content-Type: application/json
+
+{}
+
+###
+GET http://localhost:4000/book_category/products_category/
+
+###
+GET http://localhost:4000/book_category/
+
+
+###
+GET http://localhost:4000/product_hot/?limit=12
+
+###
+GET http://localhost:4000/products/?limit=4
+
+
+###
+GET http://localhost:4000/product/5
+
+###
+POST http://localhost:4000/don_hang/
+Content-Type: application/json
+
+{
+    "Fullname_nguoi_nhan": "Nguyen Van D",
+    "Sđt_nguoi_nhan": "010101606",
+    "Address_nguoi_nhan": "TPHCM",
+    "Email_nguoi_nhan": "nguyenvan323232@gmail.com",
+    "chi_tiet_don_hang": [
+        {
+           "Ten": "Trang Quynh",
+           "So_luong": 3,
+           "Don_gia": 40000,
+           "Thanh_tien": 120000
+        }
+    ]
+}
+
+###
+GET http://localhost:4000/don_hang/abcd_000000000059
+
+###
+GET http://localhost:4000/don_hang/tim-kiem/abcd_00000000059
+
+###
+GET http://localhost:4000/dashboard/get-last-month
+
+###
+GET http://localhost:4000/dashboard/data-last-month
+
+###
+GET http://localhost:4000/dashboard/data-employee
+
+###
+GET http://localhost:4000/dashboard/don-hang/2020
+
+###
+GET http://localhost:4000/dashboard/don-hang-so-thang/2020
+
+
+###
+POST http://localhost:4000/add_book/
+Content-Type: application/json
+
+{
+    "ID": 1,
+    "Type": 0,
+    "Ten": "Conan",
+    "ID_tac_gia": 1,
+    "ID_the_loai": 1,
+    "ID_nha_xuat_ban": 1,
+    "Tom_tat": "Connan Janpan",
+    "Ngay_xuat_ban": "1/1/2011",
+    "Doc_thu": "conan",
+    "Kich_thuoc": "12x12",
+    "SKU": "300303030",
+    "Hinh": "abc.jpg",
+    "So_trang": 123,
+    "Don_gia": 120000,
+    "Tinh_Trang": 1,
+    "Alias": "co-nan",
+    "Noi_bat": 0
+}
