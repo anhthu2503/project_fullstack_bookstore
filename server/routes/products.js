@@ -53,20 +53,16 @@ router.get('/', function(req, res, next) {
         else {
             query_limit = ''
         }
-       
         // Use the connection
         connection.query('SELECT s.*, Ten_tac_gia FROM sach_truyen s JOIN tac_gia tg ON s.ID_tac_gia = tg.ID ' + query_limit, function (error, results, fields) {
           // When done with the connection, release it.
           connection.release();
-       
           // Handle error after the release.
           if (error) throw error;
-       
           res.json(results);
         });
     });
 
-    
 });
 
 

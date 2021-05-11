@@ -203,7 +203,7 @@ const Results = ({ className, products, ...rest }) => {
                     {moment(product.ngay_tao).format('DD/MM/YYYY')}
                   </TableCell>
                   <TableCell>
-                    <Link to={`/app/quan-ly-san-pham/${product.ID}`}>
+                    <Link to={`/app/products/${product.ID}`}>
                       <Button variant="contained" color="primary">
                         <EditIcon />
                       </Button>
@@ -225,7 +225,7 @@ const Results = ({ className, products, ...rest }) => {
         onChangeRowsPerPage={handleLimitChange}
         page={page}
         rowsPerPage={limit}
-        rowsPerPageOptions={[5, 10, 25]}
+        rowsPerPageOptions={[5, 10, 25, 50, 100, 150, 200, 205, 210, 250, 300]}
       />
     </Card>
   );

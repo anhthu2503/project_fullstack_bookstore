@@ -23,7 +23,6 @@ var menuQuanTriRouter = require('./routes/menu');
 var addBookRouter = require('./routes/add_book');
 var viewLogRouter = require('./routes/view_log');
 
-
 var app = express();
 
 app.use(cors());
@@ -84,7 +83,6 @@ app.use('/phan-quyen', phanQuyenRouter);
 app.use('/menu-quan-tri', menuQuanTriRouter);
 app.use('/add_book', addBookRouter);
 app.use('/view_log', viewLogRouter);
-// app.use('/san_pham', sanPhamRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

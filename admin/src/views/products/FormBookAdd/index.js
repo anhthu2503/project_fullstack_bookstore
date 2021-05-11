@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
 const FormUsersAdd = () => {
   const classes = useStyles();
   const navigate = useNavigate();
-  const [userInfo, setUserInfo] = useState({
+  const [bookInfo, setBookInfo] = useState({
     Type: '',
     Ten: '',
     ID_tac_gia: '',
@@ -56,8 +56,8 @@ const FormUsersAdd = () => {
   const handleSubmit = (event) => {
     setIsSubmitting(true);
     event.preventDefault();
-    console.log(userInfo);
-    axios.post('http://localhost:4000/add_book/', userInfo)
+    console.log(bookInfo);
+    axios.post('http://localhost:4000/add_book/', bookInfo)
       .then((response) => {
         console.log(response);
         setTypeError('success');
@@ -76,8 +76,8 @@ const FormUsersAdd = () => {
 
   const handleChange = (e) => {
     console.log(e.target.name, e.target.value);
-    setUserInfo({
-      ...userInfo,
+    setBookInfo({
+      ...bookInfo,
       [e.target.name]: e.target.value
     });
   };
@@ -127,7 +127,7 @@ const FormUsersAdd = () => {
                   name="Type"
                   onBlur={handleBlur}
                   onChange={handleChange}
-                  value={userInfo.Type}
+                  value={bookInfo.Type}
                   variant="outlined"
                 />
                 <TextField
@@ -139,7 +139,7 @@ const FormUsersAdd = () => {
                   name="Ten"
                   onBlur={handleBlur}
                   onChange={handleChange}
-                  value={userInfo.Ten}
+                  value={bookInfo.Ten}
                   variant="outlined"
                 />
                 <TextField
@@ -151,7 +151,7 @@ const FormUsersAdd = () => {
                   name="ID_tac_gia"
                   onBlur={handleBlur}
                   onChange={handleChange}
-                  value={userInfo.ID_tac_gia}
+                  value={bookInfo.ID_tac_gia}
                   variant="outlined"
                 />
                 <TextField
@@ -163,7 +163,7 @@ const FormUsersAdd = () => {
                   name="ID_the_loai"
                   onBlur={handleBlur}
                   onChange={handleChange}
-                  value={userInfo.ID_the_loai}
+                  value={bookInfo.ID_the_loai}
                   variant="outlined"
                 />
                 <TextField
@@ -175,7 +175,7 @@ const FormUsersAdd = () => {
                   name="ID_nha_xuat_ban"
                   onBlur={handleBlur}
                   onChange={handleChange}
-                  value={userInfo.ID_nha_xuat_ban}
+                  value={bookInfo.ID_nha_xuat_ban}
                   variant="outlined"
                 />
                 <TextField
@@ -187,7 +187,7 @@ const FormUsersAdd = () => {
                   name="Tom_tat"
                   onBlur={handleBlur}
                   onChange={handleChange}
-                  value={userInfo.Tom_tat}
+                  value={bookInfo.Tom_tat}
                   variant="outlined"
                 />
                 <TextField
@@ -199,7 +199,7 @@ const FormUsersAdd = () => {
                   name="Ngay_xuat_ban"
                   onBlur={handleBlur}
                   onChange={handleChange}
-                  value={userInfo.Ngay_xuat_ban}
+                  value={bookInfo.Ngay_xuat_ban}
                   variant="outlined"
                 />
                 <TextField
@@ -211,7 +211,7 @@ const FormUsersAdd = () => {
                   name="Doc_thu"
                   onBlur={handleBlur}
                   onChange={handleChange}
-                  value={userInfo.Doc_thu}
+                  value={bookInfo.Doc_thu}
                   variant="outlined"
                 />
                 <TextField
@@ -223,7 +223,7 @@ const FormUsersAdd = () => {
                   name="Kich_thuoc"
                   onBlur={handleBlur}
                   onChange={handleChange}
-                  value={userInfo.Kich_thuoc}
+                  value={bookInfo.Kich_thuoc}
                   variant="outlined"
                 />
                 <TextField
@@ -235,7 +235,7 @@ const FormUsersAdd = () => {
                   name="SKU"
                   onBlur={handleBlur}
                   onChange={handleChange}
-                  value={userInfo.SKU}
+                  value={bookInfo.SKU}
                   variant="outlined"
                 />
                 <TextField
@@ -247,7 +247,7 @@ const FormUsersAdd = () => {
                   name="Hinh"
                   onBlur={handleBlur}
                   onChange={handleChange}
-                  value={userInfo.Hình}
+                  value={bookInfo.Hình}
                   variant="outlined"
                 />
                 <TextField
@@ -259,7 +259,7 @@ const FormUsersAdd = () => {
                   name="So_trang"
                   onBlur={handleBlur}
                   onChange={handleChange}
-                  value={userInfo.So_trang}
+                  value={bookInfo.So_trang}
                   variant="outlined"
                 />
                 <TextField
@@ -271,7 +271,7 @@ const FormUsersAdd = () => {
                   name="Don_gia"
                   onBlur={handleBlur}
                   onChange={handleChange}
-                  value={userInfo.Don_gia}
+                  value={bookInfo.Don_gia}
                   variant="outlined"
                 />
                 <TextField
@@ -283,7 +283,7 @@ const FormUsersAdd = () => {
                   name="Tinh_Trang"
                   onBlur={handleBlur}
                   onChange={handleChange}
-                  value={userInfo.Tinh_Trang}
+                  value={bookInfo.Tinh_Trang}
                   variant="outlined"
                 />
                 <TextField
@@ -295,7 +295,7 @@ const FormUsersAdd = () => {
                   name="Alias"
                   onBlur={handleBlur}
                   onChange={handleChange}
-                  value={userInfo.Alias}
+                  value={bookInfo.Alias}
                   variant="outlined"
                 />
                 <TextField
@@ -307,7 +307,7 @@ const FormUsersAdd = () => {
                   name="Noi_bat"
                   onBlur={handleBlur}
                   onChange={handleChange}
-                  value={userInfo.Noi_bat}
+                  value={bookInfo.Noi_bat}
                   variant="outlined"
                 />
                 <Box
